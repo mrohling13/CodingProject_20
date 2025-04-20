@@ -1,8 +1,6 @@
 // Task 3: Render Tour Cards
 
 
-
-
 import React, { useState } from "react";
 
 

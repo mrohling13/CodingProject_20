@@ -1,7 +1,5 @@
 // Task 1: Fetch & Store Tour Data
 
-
-
 import React, { useEffect, useState } from 'react';
 
 
@@ -61,7 +59,8 @@ const Gallery = ({ tours, setTours, onRemove }) => {
     return <h2>Something went wrong.</h2>;
   }
 
-  
+  // Task 4: Reset View
+
   if (tours.length === 0) {
     return (
       <div className="no-tours">
@@ -73,6 +72,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
     );
   }
 
+  // Task 3: Render Tour Cards
   
   return (
     <section className="gallery">

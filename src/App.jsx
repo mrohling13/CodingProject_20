@@ -1,4 +1,4 @@
-
+// Task 2: Create Dropdown Filter
 import React, { useState } from 'react';
 
 
@@ -18,15 +18,15 @@ function App() {
   
   const [selectedTour, setSelectedTour] = useState('all'); 
 
-  
-  
+  // Task 3: Render Tour Cards
   
   const removeTour = (id) => {
     setTours((prevTours) => {
       
       const updatedTours = prevTours.filter((tour) => tour.id !== id);
 
-      
+      // Task 4: Reset View
+
       if (
         selectedTour !== 'all' &&
         updatedTours.filter((tour) => tour.name === selectedTour).length === 0
@@ -39,7 +39,8 @@ function App() {
     });
   };
 
-  
+  // Task 2: Create Dropdown Filter
+
   const filteredTours =
     selectedTour === 'all'
       ? tours 

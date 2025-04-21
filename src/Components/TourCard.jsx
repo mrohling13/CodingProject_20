@@ -1,12 +1,12 @@
 // Task 3: Render Tour Cards
 
 
-import React, { useState } from "react";
+import React, { useState } from "react"; // imports from react
 
 
-const TourCard = ({ id, name, info, image, price, onRemove }) => {
+const TourCard = ({ id, name, info, image, price, onRemove }) => { // displays all the information
   
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(false); // displays full discription
 
   return (
     <article className="tour-card">

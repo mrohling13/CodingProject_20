@@ -1,31 +1,31 @@
 // Task 1: Fetch & Store Tour Data
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; // imports reacts and its tools 
 
 
-import TourCard from './TourCard';
+import TourCard from './TourCard'; // imports tour card
 
 
-const url = 'https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project';
+const url = 'https://api.allorigins.win/raw?url=https://course-api.com/react-tours-project'; // url contains tour data
 
 
-const Gallery = ({ tours, setTours, onRemove }) => {
+const Gallery = ({ tours, setTours, onRemove }) => { // displays all tours
   
-  const [loading, setLoading] = useState(true);
-
-  
-  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true); // displays loading when being fetched
 
   
-  const fetchTours = async () => {
+  const [error, setError] = useState(false); // displays error
+
+  
+  const fetchTours = async () => { // fetches tour data
     try {
       
-      setLoading(true);
-      const response = await fetch(url);
+      setLoading(true); // loading screen
+      const response = await fetch(url); 
 
       
       if (!response.ok) {
-        throw new Error("Failed to fetch tours");
+        throw new Error("Failed to fetch tours"); // shows error
       }
 
       
@@ -35,12 +35,12 @@ const Gallery = ({ tours, setTours, onRemove }) => {
       console.log('Fetch error:', error);
 
       
-      setError(true);
+      setError(true); // displays error
 
       setLoading(false);
     } finally {
       
-      setLoading(false);
+      setLoading(false); 
     }
   };
 
@@ -74,7 +74,7 @@ const Gallery = ({ tours, setTours, onRemove }) => {
 
   // Task 3: Render Tour Cards
   
-  return (
+  return ( // displays all tours
     <section className="gallery">
       {tours.map((tour) => (
         <TourCard
